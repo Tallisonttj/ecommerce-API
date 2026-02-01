@@ -1,15 +1,13 @@
 import { ProductGrid } from "@/components/product/ProductGrid";
 
 
-export default function Products({
-  params: { id },
+
+export default async function Products({
+  params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>
 }) {
-  return (
-    <>
-    <ProductGrid id={parseInt(id)}/>
-    </>
-  )
-    
+  const { id } = await params
+
+  return <ProductGrid id={parseInt(id)}/>
 }

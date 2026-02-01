@@ -2,12 +2,15 @@
 import { Product } from "@/components/ui/Product";
 
 
-export default function Products({
-  params: { produto },
+export default async function Products({
+  params,
 }: {
-  params: { produto: string };
+  params:Promise<{ produto: string }>;
 }) {
+
+  const { produto } = await params
   return (
+    
     <>
     <Product id={parseInt(produto)}/>
     </>
