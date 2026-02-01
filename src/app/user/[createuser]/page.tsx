@@ -1,5 +1,4 @@
-import { CreateUser } from "@/pages/createUser";
-
+import { CreateUser } from "@/components/createUser";
 
 export default function CreateUs({
   params: { createuser },
@@ -8,8 +7,7 @@ export default function CreateUs({
 }) {
   return (
     <>
-    <CreateUser/>
+      <CreateUser />
     </>
-  )
-    
+  );
 }

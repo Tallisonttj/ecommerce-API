@@ -1,6 +1,8 @@
+'use client'
+
 import { useCartContext } from "@/context/CartContext";
 
-export const Cart = () => {
+export default function Cart() {
   const CartCTX = useCartContext();
   
 

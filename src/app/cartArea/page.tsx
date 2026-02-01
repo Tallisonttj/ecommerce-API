@@ -1,4 +1,4 @@
-import { Cart } from "@/pages/Cart";
+import Cart from "@/components/Cart";
 
 export default function CartArea({
   params: { cartArea },
@@ -7,8 +7,7 @@ export default function CartArea({
 }) {
   return (
     <>
-    <Cart/>
+      <Cart />
     </>
-  )
-    
+  );
 }

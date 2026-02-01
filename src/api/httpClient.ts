@@ -12,7 +12,7 @@ export const httpClient = axios.create(
 
   export const  getCategory =  async (): Promise<Category[]> => {
         const response = await httpClient.get(`/categories`)
-        return (await response.data.filter((i) => i.image.includes('.jpeg' ) || i.image.includes('.jpg')))
+        return (await response.data.filter((i:Category) => i.image.includes('.jpeg' ) || i.image.includes('.jpg')))
     }
   export const  getProducts =  async (): Promise<Produto[]> => {
         const response = await httpClient.get(`/products`)

@@ -3,12 +3,12 @@
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { useState } from "react";
-import { CreateUser } from "./createUser";
 import { useAuthContext } from "@/context/AuthContext";
-import { Userlogget } from "./Userlogged";
-import Link from "next/link";
 
-export const Login = () => {
+import Link from "next/link";
+import Userlogget from "./Userlogged";
+
+export default function Login () {
   
   const [eMali, setEmail] = useState("");
   const [senha, setSenha] = useState("");

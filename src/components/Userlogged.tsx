@@ -5,7 +5,7 @@ import { useAuthContext } from "@/context/AuthContext";
 type Prop = {
   loggedout: () => void
 }
-export const Userlogget = ({loggedout}:Prop) => {
+export default function Userlogget({loggedout}:Prop) {
     const userCxt = useAuthContext();
 
      const logout = () => {
