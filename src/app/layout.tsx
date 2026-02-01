@@ -32,13 +32,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Provider>
-           <header className="">
+           <header className="w-screen">
             <nav><Header/></nav>
            </header>
-          <main className="bg-primary min-h-screen flex flex-col items-center">
+          <main className="bg-primary w-screen min-h-screen flex flex-col items-center">
             {children}
             </main>
-          <footer>
+          <footer className="">
             <Footer/>
           </footer>
         </Provider>
