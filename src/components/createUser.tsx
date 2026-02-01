@@ -39,7 +39,7 @@ export const CreateUser = () => {
           <div className="border flex items-center h-18 p-2 w-full md:max-w-md">
             <Input className="text-xl"  label="Avatar" type="string"   value={avatar} onclick={(e) => setAvatar(e)} />
           </div>
-          <Button msg="criar usuario" className="md:w-40 md:h-10" onclick={() => {}}/>
+          <Button msg="Criar usuario" className="md:w-40 p-2 md:h-10" onclick={() => {}}/>
           </div>
         </section>
 

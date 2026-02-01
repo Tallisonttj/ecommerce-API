@@ -7,20 +7,23 @@ import Link from "next/link";
 
 
 
-export const Header = () => {
 
+export const Header = () => {
   const category = useCategories()
-  
-  
   return (
     <section className=" bg-white h-full p-4 flex justify-between md:items-center md:justify-around md:px-10">
       <div className="flex gap-2 items-center">
-        <Image
+        <div>
+         <Link href={'/sidebar'}>
+         <Image
           width={20} height={20}
           src="/assets/images/Vector.svg"
           className="sm:hidden"
           alt="menu sanduiche"
         />
+         </Link>
+        
+        </div>
         <p className="font-BBH cursor-pointer">
           <Link href={`/`}>SHOP.CO</Link>
         </p>
@@ -43,11 +46,6 @@ export const Header = () => {
           ))}
         </ul>
         }
-
-
-
-
-         
       </div>
       <div className="flex gap-2 items-center">
         <div className="hidden md:flex">
@@ -59,10 +57,7 @@ export const Header = () => {
         <Link href={'/user'}>
         <Image height={20} width={20} src="/assets/images/user.svg" alt="icone usuario" /> 
         </Link>
-        
-        
         <Image height={20} width={20} src="/assets/images/cart.svg" alt="icone carrinho" />
-        
       </div>
     </section>
   );

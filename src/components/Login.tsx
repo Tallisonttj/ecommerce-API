@@ -32,9 +32,9 @@ export default function Login () {
 
    return (
    
-    <section className="mx-auto mt-20">
+    <section className="mx-auto mt-20 container">
       {!userCtx?.isLogged && 
-      <div className="containeir">
+      <div className="">
         <div className="p-3 flex flex-col md:flex-row gap-4 items-center">
           <div className="flex-1 h-100 p-3 flex flex-col  gap-4 text-left md:justify-between md:items-center md:max-w-xl">
             <h1 className="text-3xl font-semibold">Já tenho um cadastro!</h1>
@@ -98,9 +98,7 @@ export default function Login () {
         
         }
       
-     
-        
-      
+    
     </section>
   );
 };
