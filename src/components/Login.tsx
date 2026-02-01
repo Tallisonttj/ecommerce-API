@@ -32,27 +32,21 @@ export default function Login () {
 
    return (
    
-    <section className="mx-auto mt-20 container">
+    <section className="">
       {!userCtx?.isLogged && 
-      <div className="">
+      <div className="container flex items-center">
         <div className="p-3 flex flex-col md:flex-row gap-4 items-center">
-          <div className="flex-1 h-100 p-3 flex flex-col  gap-4 text-left md:justify-between md:items-center md:max-w-xl">
-            <h1 className="text-3xl font-semibold">Já tenho um cadastro!</h1>
+          <div className="flex-1 h-120 p-3 flex flex-col  gap-4 text-left md:justify-between md:items-center md:max-w-xl">
+            <h1 className="p-3 text-3xl font-semibold">Já tenho um cadastro!</h1>
             <p className="text-xl">
               Insira seu e-mail e senha para acessar sua conta.
             </p>
-            <div className="border flex items-center  h-18 p-2 w-full md:max-w-md">
-              <Input className="text-2xl"  label="E-mail" type="text" value={eMali} onclick={(e) => setEmail(e)} />
+            <div className="flex items-center h-full w-full p-2 md:max-w-md">
+              <Input className="text-2xl"  label="E-mail" type="text" value={eMali} onclick={(e) => setEmail(e)} onCl={() => {}} />
             </div>
             
-            <div className="border relative flex items-center overflow-hidden
-             h-18 p-2 w-full  md:max-w-md">
-              <Input className="text-2xl" value={senha} type={`${!mostrar? 'password' : 'text' }`} onclick={(e) => setSenha(e)} label="Senha"/>
-              <img className="absolute right-2"
-                onClick={() => versenha()}
-                src={`/assets/images/${!mostrar ? 'icons8-olho-aberto30.png': 'icons8-olho-fechado30.png'}`}
-                alt=""
-              />
+            <div className="flex items-center h-full w-full p-2 md:max-w-md">
+              <Input className="text-2xl" value={senha} type={`${!mostrar? 'password' : 'text' }`} onclick={(e) => setSenha(e)} label="Senha" img={`/assets/images/${!mostrar ? 'icons8-olho-aberto30.png': 'icons8-olho-fechado30.png'}`} onCl={() => versenha()}/>
             </div>
 
             <p className="cursor-pointer hover:underline">Esqueci a senha</p>
@@ -69,7 +63,7 @@ export default function Login () {
             OU
             <div className="flex flex-col border-r-2 h-30 "></div>
           </div>
-          <div className="flex-1 flex flex-col h-100 p-3 gap-4 text-left md:justify-between md:items-center md:max-w-xl">
+          <div className="flex-1 flex flex-col h-120 p-3 gap-4 text-left md:justify-between md:items-center md:max-w-xl">
             <h1 className="text-3xl text-left font-semibold">
               Ainda não possuo cadastro
             </h1>

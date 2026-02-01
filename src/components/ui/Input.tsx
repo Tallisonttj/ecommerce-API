@@ -1,12 +1,14 @@
 
 'use Client'
 type inputType = {
+   img?:string
    label:string
    type:string
    value:string
    className?:string
    onclick: (e:string) => void
    onblur?: () => void
+   onCl?: () => void
 
 }
 export const Search = () => {
@@ -21,10 +23,11 @@ export const Search = () => {
    
 }
 
-export const Input = ({label, type, value, onclick, className, onblur }:inputType) => {
+export const Input = ({label, type, value, onclick, className, onblur, img, onCl }:inputType) => {
 
   return (
-    <label className={`text-[19px] md:text-xl text-left items-center h-18 p-2 w-full flex focus-within:flex-col focus-within:text-sm focus-within:items-baseline  has-[input:not(:placeholder-shown)]:text-sm has-[input:not(:placeholder-shown)]:flex-col has-[input:not(:placeholder-shown)]:items-baseline md:max-w-md}`}>
+    <div className="border w-full flex relative items-center">
+      <label className={`text-[19px] md:text-xl text-left items-center  h-18 p-2 w-full flex focus-within:flex-col focus-within:text-sm focus-within:items-baseline  has-[input:not(:placeholder-shown)]:text-sm has-[input:not(:placeholder-shown)]:flex-col has-[input:not(:placeholder-shown)]:items-baseline md:max-w-md}`}>
               {label}
               <input
                 type={type}
@@ -35,7 +38,15 @@ export const Input = ({label, type, value, onclick, className, onblur }:inputTyp
                 className={`outline-none ${className}`}
               />
             </label>
-
+            {
+              onCl &&
+               <img className="absolute right-2"
+                onClick={() => onCl()}
+                src={img}
+                alt=""
+              />
+            }
+    </div>
+    
   )
-
 }
