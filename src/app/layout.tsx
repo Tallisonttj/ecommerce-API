@@ -35,7 +35,7 @@ export default function RootLayout({
            <header className="w-screen">
             <nav><Header/></nav>
            </header>
-          <main className="bg-primary w-screen min-h-screen flex flex-col items-center">
+          <main className="bg-primary w-screen overflow-x-hidden min-h-screen flex flex-col items-center">
             {children}
             </main>
           <footer className="">

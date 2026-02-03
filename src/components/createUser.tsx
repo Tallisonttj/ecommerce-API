@@ -27,16 +27,16 @@ export const CreateUser = () => {
             <h1 className="text-2xl font-semibold">
            Crie um novo usuario
           </h1>
-          <div className="border flex items-center h-18 p-2 w-full md:max-w-md">
+          <div className="flex items-center h-18 p-2 w-full md:max-w-md">
             <Input className="text-2xl"  label="Nome" type="text" value={name} onclick={(e) => setName(e)}/>
           </div>
-          <div className={`border flex items-center h-18 p-2 w-full md:max-w-md` }>
+          <div className={` flex items-center h-18 p-2 w-full md:max-w-md` }>
             <Input className="text-2xl"  label="E-mail"  type="email" value={email} onclick={(e) => setEmail(e)}  />
           </div>
-          <div className="border flex items-center h-18 p-2 w-full md:max-w-md">
+          <div className=" flex items-center h-18 p-2 w-full md:max-w-md">
             <Input className="text-2xl"  label="Senha" type="text"  value={senha} onclick={(e) => setSenha(e)}/>
           </div>
-          <div className="border flex items-center h-18 p-2 w-full md:max-w-md">
+          <div className=" flex items-center h-18 p-2 w-full md:max-w-md">
             <Input className="text-xl"  label="Avatar" type="string"   value={avatar} onclick={(e) => setAvatar(e)} />
           </div>
           <Button msg="Criar usuario" className="md:w-40 p-2 md:h-10" onclick={() => {}}/>

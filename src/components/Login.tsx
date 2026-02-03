@@ -35,18 +35,21 @@ export default function Login () {
     <section className="text-xl">
       {!userCtx?.isLogged && 
       <div className="container flex items-center">
-        <div className="p-3 flex flex-col md:flex-row gap-3 items-center">
-          <div className="flex-1 md:h-120 p-3 flex flex-col text-left md:justify-between md:items-center md:max-w-xl">
-            <h1 className="p-3 text-3xl font-semibold">Já tenho um cadastro!</h1>
+        <div className="flex flex-col md:flex-row gap-3 text-left items-center">
+          <div className="flex-1 md:h-120 p-3 gap-3 flex flex-col text-left md:justify-between md:items-center md:max-w-xl">
+            <div>
+              <h1 className="py-3 text-2xl font-semibold">Já tenho um cadastro!</h1>
             <p className="text-xl">
               Insira seu e-mail e senha para acessar sua conta.
             </p>
-            <div className="flex items-center h-full w-full p-2 md:max-w-md">
-              <Input className="text-2xl"  label="E-mail" type="text" value={eMali} onclick={(e) => setEmail(e)} onCl={() => {}} />
             </div>
             
-            <div className="flex flex-col gap-2 items-center h-full w-full p-2 md:max-w-md">
-              <Input className="text-2xl" value={senha} type={`${!mostrar? 'password' : 'text' }`} onclick={(e) => setSenha(e)} label="Senha" img={`/assets/images/${!mostrar ? 'icons8-olho-aberto30.png': 'icons8-olho-fechado30.png'}`} onCl={() => versenha()}/>
+            <div className="flex items-center h-full w-full md:max-w-md">
+              <Input className="text-xl"  label="E-mail" type="text" value={eMali} onclick={(e) => setEmail(e)} onCl={() => {}} />
+            </div>
+            
+            <div className="flex flex-col gap-2 items-center h-full w-full md:max-w-md">
+              <Input className="text-xl" value={senha} type={`${!mostrar? 'password' : 'text' }`} onclick={(e) => setSenha(e)} label="Senha" img={`/assets/images/${!mostrar ? 'icons8-olho-aberto30.png': 'icons8-olho-fechado30.png'}`} onCl={() => versenha()}/>
 
             <p className="cursor-pointer hover:underline">Esqueci a senha</p>
 
@@ -66,10 +69,10 @@ export default function Login () {
             <div className="flex flex-col border-r-2 h-30 "></div>
           </div>
           <div className="flex-1 flex flex-col h-120 p-3 gap-4 text-left md:justify-between md:items-center md:max-w-xl">
-            <h1 className="text-3xl text-left font-semibold">
+            <h1 className="text-2xl text-left font-semibold">
               Ainda não possuo cadastro
             </h1>
-            <p className="text-xl ">
+            <p className="text-xl">
               Ao criar uma conta você conseguirá realizar suas compras mais
               rápido, ficar atualizado com os status do pedido, e manter um
               histórico de compras já feitas.

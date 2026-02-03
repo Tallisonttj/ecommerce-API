@@ -17,7 +17,7 @@ export const ProductCard = ({item, onClick}:Prop ) => {
           <img src={item.images[0]} alt="" className="w-60 transition-all duration-300 ease-in-out hover:brightness-50" />  
         </div>
         <p className="text-clip">{item.title}</p>
-        <p className="">{FormatPrice(item.price)}</p>
+        <p className="font-semibold">{FormatPrice(item.price)}</p>
     </div>
   
   </section>
