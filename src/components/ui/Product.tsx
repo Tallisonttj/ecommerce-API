@@ -27,12 +27,12 @@ export const Product = ({ id }: Prop) => {
 
   return ( 
     <section
-      className="w-full  flex flex-col items-center gap-3
+      className="flex flex-col items-center gap-3
       p-4"
     >
       {item &&  
-      <div className="max-w-3xl flex flex-col gap-3">
-        <div className="flex flex-col items-c gap-3 h-full lg:flex-row">
+      <div className="max-w-3xl  flex flex-col gap-3">
+        <div className="flex flex-col items-center gap-3 h-full lg:flex-row">
           <div
             className={`flex order-2 gap-3 transition-all h-full justify-between duration-300 ease-in-out lg:flex-col lg:order-1 snap-x overflow-auto lg:gap-8`}
           >
@@ -76,7 +76,7 @@ export const Product = ({ id }: Prop) => {
               {FormatPrice(item.price * qtd)}
             </h1>
             <div className="flex items-center gap-3">
-              <h1 className="text-2xl font-semibold">Quantidade:</h1>
+              <h1 className="text-xl font-semibold">Qtd:</h1>
               <div className="flex items-center gap-3">
                 <h1 className="text-4xl cursor-pointer" onClick={() => removeItem()}>-</h1>
                 <h1 className="text-2xl border px-3">{qtd}</h1>

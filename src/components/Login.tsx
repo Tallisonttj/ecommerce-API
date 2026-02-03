@@ -32,7 +32,7 @@ export default function Login () {
 
    return (
    
-    <section className="">
+    <section className="text-xl">
       {!userCtx?.isLogged && 
       <div className="container flex items-center">
         <div className="p-3 flex flex-col md:flex-row gap-3 items-center">
