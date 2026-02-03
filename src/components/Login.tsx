@@ -59,7 +59,7 @@ export default function Login () {
               <Button
                 msg="ENTRAR"
                 onclick={() => login() }
-                className="h-15 w-40 hover:bg-neutral-200 md:w-60"
+                className="h-15 text-xl font-bold w-40 hover:bg-neutral-200 md:w-60"
               />
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function Login () {
               <Button
                 msg="CRIAR CONTA"
                 onclick={() => {}}
-                className="h-15 w-40 hover:bg-neutral-200 md:w-60"
+                className="h-15 text-xl font-bold w-40 hover:bg-neutral-200 md:w-60"
               />
             </Link>
             
