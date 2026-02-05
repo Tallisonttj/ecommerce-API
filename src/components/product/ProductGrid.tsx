@@ -24,7 +24,6 @@ export const ProductGrid = ({id}:Prop) => {
                 <Link key={i.id} href={`/products/${i.category.id}/${i.id}`}>
                  <ProductCard key={i.id} item={i} onClick={() => (i.id)} /> 
                 </Link>
-                
               ))}
             </div>
           </div>

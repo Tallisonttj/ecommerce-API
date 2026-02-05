@@ -3,6 +3,9 @@ import { Button } from "./Button";
 import { FormatPrice } from "@/utils/formatPrice";
 import { useState } from "react";
 import { useProducts } from "@/queries/categoriesquery";
+import { useCartContext } from "@/context/CartContext";
+import { Produto } from "@/types/product";
+import { Cart } from "@/types/cart";
 
 type Prop = {
   id: number;
@@ -12,15 +15,23 @@ export const Product = ({ id }: Prop) => {
   const item = Product.data?.find((i) => i.id === id);
   const [imgM, setImgM] = useState(0);
   const [qtd, setQtd] = useState(1);
-  console.log(item?.id);
 
-  let textqtd: "";
+
+  const CartCtx = useCartContext()
   const addItem = () => {
     setQtd(qtd + 1);
   };
   const removeItem = () => {
     qtd <= 1 ? setQtd(1) : setQtd(qtd - 1);
   };
+  const total = item ? item.price * qtd :  0
+  const teste = (i:Produto,) => {
+    if(item){
+      CartCtx?.dispatch({type:'Add', payload:{i, qtd,}})
+    }
+    
+  }
+
 
   return (
     <section
@@ -70,7 +81,7 @@ export const Product = ({ id }: Prop) => {
                     className="text-2xl md:text-4xl font-bold
                  "
                   >
-                    {FormatPrice(item.price * qtd)}
+                    {FormatPrice(total)}
                   </h1>
                 <div className="flex  items-center gap-3">
                  
@@ -98,7 +109,7 @@ export const Product = ({ id }: Prop) => {
             <Button
               msg="Comprar"
               className="text-xl font-bold w-40 py-3"
-              onclick={() => {}}
+              onclick={() => teste(item)}
             />
           </div>
         </div>

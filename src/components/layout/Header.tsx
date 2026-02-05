@@ -22,7 +22,6 @@ export const Header = () => {
           alt="menu sanduiche"
         />
          </Link>
-        
         </div>
         <p className="font-BBH cursor-pointer">
           <Link href={`/`}>SHOP.CO</Link>
@@ -57,7 +56,9 @@ export const Header = () => {
         <Link href={'/user'}>
         <Image height={20} width={20} src="/assets/images/user.svg" alt="icone usuario" /> 
         </Link>
+        <Link href={'/Cart/cart'}>
         <Image height={20} width={20} src="/assets/images/cart.svg" alt="icone carrinho" />
+        </Link>
       </div>
     </section>
   );
