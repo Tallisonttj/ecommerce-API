@@ -1,18 +1,11 @@
 "use client";
 
 import { useAuth } from "@/queries/authquery";
+import { User } from "@/types/user";
 import { createContext, ReactNode, useContext, useState } from "react";
 
-
-type userLogadoType = {
-  name:string
-  avatar:string
-  role:string
-  email:string
-
-}
 type AuthContextType = {
-  userlogado: userLogadoType;
+  userlogado: User;
   isLogged: boolean
   setIslogged: (b:boolean) => void
   handleLoggedOut: () => void
@@ -23,7 +16,7 @@ export const AuthContext = createContext<AuthContextType | null>(null);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const user = useAuth ();
   const [isLogged, setIslogged] = useState(false);
-  const [userlogado, setUserlogado] = useState<userLogadoType>({
+  const [userlogado, setUserlogado] = useState<User>({
     name: '',
     avatar:'',
     role:'',

@@ -8,8 +8,14 @@ type AddAction = {
     qtd: number;
   };
 };
+type RemoveAction = {
+  type: "remove";
+  payload: {
+    id:number
+  };
+};
 
-export type CartActions = AddAction;
+export type CartActions = AddAction | RemoveAction;
 
 export const cartReducers = (list: Cart[], action: CartActions) => {
   switch (action.type) {
@@ -38,6 +44,7 @@ export const cartReducers = (list: Cart[], action: CartActions) => {
               total: action.payload.qtd * action.payload.i.price,
             },
           ];
+    case "remove": return list.filter(p => p.id !== action.payload.id)
     default:
       return list;
   }

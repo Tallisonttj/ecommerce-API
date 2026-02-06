@@ -8,7 +8,7 @@ import { CartActions, cartReducers } from "./cartReducer";
 
 
 type CartContextType = {
-  itemCart:Cart[] 
+  itemCart:Cart[]
   dispatch: Dispatch<CartActions
   >
 };

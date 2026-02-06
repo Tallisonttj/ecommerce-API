@@ -25,7 +25,7 @@ export const Product = ({ id }: Prop) => {
     qtd <= 1 ? setQtd(1) : setQtd(qtd - 1);
   };
   const total = item ? item.price * qtd :  0
-  const teste = (i:Produto,) => {
+  const buy = (i:Produto,) => {
     if(item){
       CartCtx?.dispatch({type:'Add', payload:{i, qtd,}})
     }
@@ -109,7 +109,7 @@ export const Product = ({ id }: Prop) => {
             <Button
               msg="Comprar"
               className="text-xl font-bold w-40 py-3"
-              onclick={() => teste(item)}
+              onclick={() => buy(item)}
             />
           </div>
         </div>
